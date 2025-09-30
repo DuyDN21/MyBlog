@@ -1,6 +1,12 @@
 # Daily Update
 ✅🔄❌📌
 
+## 2025-09-30
+- Nay có phỏng vấn 2 chỗ, chưa có kết quả nhưng tự mình thấy chắc không pass vì chưa oke lắm
+- Kệ đi, dù sao thì, hôm nay mình hơi bận nên sẽ chỉ update phần query SQL để tạo DB thôi, lát nữa nếu có thời gian mình sẽ update thêm 
+
+---
+
 ## 2025-09-27
 - Có thử tìm hiểu và tham khảo blog sau: https://thanhle.blog/
 - Có các điểm như sau:
