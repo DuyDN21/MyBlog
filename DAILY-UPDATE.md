@@ -2,6 +2,18 @@
 ✅🔄❌📌
 
 ## 2025-09-30
+- Hôm nay chọn công nghệ sẽ sử dụng: 
+    + 1 năm nay không được động vào sâu và nhiều vào c# .net, nên chắc sẽ chọn ASP .NET Core MVC
+    + Oke, nay cứ init dự án MVC cái đã, xong sẽ tính làm gì tiếp theo
+    + Cứ làm 1 cái MVP trước, rồi tính đến mấy cái râu ria tối ưu sau
+- Oke đã init dự án xong, giờ tính xem mai làm gì tiếp theo:
+    + DB Connection: chắc chọn EF core là đẹp
+    + Authentication: đăng ký, đăng nhập, đăng nhập với google, facebook đê
+📌 Cứ thế đã, khéo làm hết đống kể trên hết cả cuối tuần
+
+---
+
+## 2025-09-30
 - Nay có phỏng vấn 2 chỗ, chưa có kết quả nhưng tự mình thấy chắc không pass vì chưa oke lắm
 - Kệ đi, dù sao thì, hôm nay mình hơi bận nên sẽ chỉ update phần query SQL để tạo DB thôi, lát nữa nếu có thời gian mình sẽ update thêm 
 
