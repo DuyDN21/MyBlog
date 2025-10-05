@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using MyBlog.DataAccess.Models;
+
 namespace MyBlog.App
 {
     public class Program
@@ -5,6 +8,13 @@ namespace MyBlog.App
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // Add DbContext
+            builder.Services.AddDbContext<PersonalBlogContext>(options =>
+                options.UseMySql(
+                    builder.Configuration.GetConnectionString("DefaultConnection"),
+                    new MySqlServerVersion(new Version(8, 0, 36))
+                ));
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

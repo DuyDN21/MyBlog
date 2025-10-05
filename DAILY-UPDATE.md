@@ -1,7 +1,13 @@
 # Daily Update
 ✅🔄❌📌
 
-## 2025-09-30
+## 2025-10-05
+- OK, đã tạo project kết nối DB, tuy nhiên chưa thử test xem đã connect được và query được chưa
+- Tiếp theo sẽ mock 1 ít data user, để làm authentication
+
+---
+
+## 2025-10-02
 - Hôm nay chọn công nghệ sẽ sử dụng: 
     + 1 năm nay không được động vào sâu và nhiều vào c# .net, nên chắc sẽ chọn ASP .NET Core MVC
     + Oke, nay cứ init dự án MVC cái đã, xong sẽ tính làm gì tiếp theo
