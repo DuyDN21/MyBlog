@@ -1,6 +1,11 @@
 # Daily Update
 ✅🔄❌📌
 
+## 2025-10-07
+- Nay hơi bận bên công ty, với bên start-up nên chưa có tiến triển gì
+
+---
+
 ## 2025-10-05
 - OK, đã tạo project kết nối DB, tuy nhiên chưa thử test xem đã connect được và query được chưa
 - Tiếp theo sẽ mock 1 ít data user, để làm authentication
