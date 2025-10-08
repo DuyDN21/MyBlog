@@ -2,6 +2,11 @@
 ✅🔄❌📌
 
 ## 2025-10-07
+- Nay sinh nhật ny, với việc trên công ty vẫn hơi bận nên chưa có tiến triển gì
+
+---
+
+## 2025-10-07
 - Nay hơi bận bên công ty, với bên start-up nên chưa có tiến triển gì
 
 ---
