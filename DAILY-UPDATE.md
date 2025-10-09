@@ -2,6 +2,12 @@
 ✅🔄❌📌
 
 ## 2025-10-07
+- Thật sự bận rộn việc công ty vì 1 mình nhưng phải làm khối lượng công việc của 2 người, về rồi vẫn phải mang việc về làm
+- Tối nay sẽ thức muộn 1 chút để làm vậy.
+
+---
+
+## 2025-10-07
 - Nay sinh nhật ny, với việc trên công ty vẫn hơi bận nên chưa có tiến triển gì
 
 ---
