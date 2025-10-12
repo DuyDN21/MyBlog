@@ -1,6 +1,15 @@
 # Daily Update
 ✅🔄❌📌
 
+## 2025-10-12
+- Làm qua qua chút login, mới login cơ bản thôi, chưa có gì
+- Tiếp theo sẽ thêm:
+    + Thông báo lỗi nếu sai thông tin đăng nhập
+    + Sửa cái UI cho đẹp đẹp tý
+    + Lưu thông tin đăng nhập remember me
+
+---
+
 ## 2025-10-07
 - Thật sự bận rộn việc công ty vì 1 mình nhưng phải làm khối lượng công việc của 2 người, về rồi vẫn phải mang việc về làm
 - Tối nay sẽ thức muộn 1 chút để làm vậy.
