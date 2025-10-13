@@ -1,7 +1,99 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model RegisterViewModel
+
 @{
+    ViewData["Title"] = "Đăng ký tài khoản";
 }
 
-<div>Register</div>
+<style>
+    body {
+        background-color: #e8f3ff;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .register-container {
+        max-width: 450px;
+        margin: 80px auto;
+        background: white;
+        padding: 40px 45px;
+        border-radius: 15px;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+        border-top: 5px solid #007bff;
+    }
+
+    .register-title {
+        text-align: center;
+        color: #007bff;
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+
+    .form-control {
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid #ced4da;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .btn-register {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+
+        .btn-register:hover {
+            background-color: #0056b3;
+        }
+
+    .form-footer {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 0.9rem;
+    }
+
+        .form-footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+            .form-footer a:hover {
+                text-decoration: underline;
+            }
+
+    .error-message {
+        color: red;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="register-container">
+    <div class="register-title">Tạo tài khoản</div>
+
+    <form method="post" asp-controller="Authen" asp-action="Register">
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="error-message">
+                @Html.ValidationSummary()
+            </div>
+        }
+
+        <input type="email" asp-for="Email" placeholder="Email" class="form-control" required />
+        <input type="text" asp-for="Username" placeholder="Username" class="form-control" required />
+        <input type="password" asp-for="Password" placeholder="Mật khẩu" class="form-control" required />
+        <input type="password" asp-for="RetypePassword" placeholder="Xác nhận mật khẩu" class="form-control" required />
+
+        <button type="submit" class="btn-register">Đăng ký</button>
+
+        <div class="form-footer">
+            Đã có tài khoản? <a asp-controller="Authen" asp-action="Login">Đăng nhập</a>
+        </div>
+    </form>
+</div>
+

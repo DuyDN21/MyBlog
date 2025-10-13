@@ -1,31 +1,90 @@
 ﻿@model LoginViewModel
 @{
-	ViewData["Title"] = "Đăng nhập";
+    ViewData["Title"] = "Đăng nhập";
 }
 
-<h2>Đăng nhập</h2>
+<style>
+    body {
+        background-color: #f0f8ff;
+        font-family: 'Segoe UI', sans-serif;
+    }
 
-<form asp-action="Login" method="post">
-	@Html.AntiForgeryToken()
-	<div>
-		<label>Email:</label>
-		<input asp-for="Email" />
-		<span asp-validation-for="Email" class="text-danger"></span>
-	</div>
+    .login-container {
+        max-width: 400px;
+        margin: 100px auto;
+        background: white;
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border-top: 5px solid #007bff;
+    }
 
-	<div>
-		<label>Mật khẩu:</label>
-		<input asp-for="Password" type="password"/>
-		<span asp-validation-for="Password" class="text-danger"></span>
-	</div>
+    .login-title {
+        text-align: center;
+        color: #007bff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
 
-	<div>
-		<input asp-for="RememberMe" /> Ghi nhớ đăng nhập
-	</div>
+    .form-control {
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid #ced4da;
+        padding: 10px;
+    }
 
-	<button type="submit">Đăng nhập</button>
-</form>
+    .btn-login {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.2s;
+    }
 
-@section Scripts {
-	<partial name="_ValidationScriptsPartial" />
-}
+    .btn-login:hover {
+        background-color: #0056b3;
+    }
+
+    .remember-me {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        color: #333;
+    }
+
+    .error-message {
+        color: red;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+</style>
+
+<div class="login-container">
+    <div class="login-title">Đăng nhập</div>
+
+    <form method="post" asp-controller="Authen" asp-action="Login">
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="error-message">
+                @Html.ValidationSummary()
+            </div>
+        }
+
+        <input type="text" name="email" placeholder="Email" class="form-control" required />
+        <input type="password" name="password" placeholder="Mật khẩu" class="form-control" required />
+
+        <div class="remember-me">
+            <label>
+                <input type="checkbox" name="rememberMe" /> Ghi nhớ đăng nhập
+            </label>
+            <a href="#">Quên mật khẩu?</a>
+        </div>
+
+        <button type="submit" class="btn-login">Đăng nhập</button>
+    </form>
+</div>

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MyBlog.App.Models;
 using MyBlog.DataAccess.Models;
@@ -30,7 +31,6 @@ namespace MyBlog.App.Controllers
         public async Task<IActionResult> Login(LoginViewModel loginViewModel, string? returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
-
             if (!ModelState.IsValid)
             {
                 return View(loginViewModel);
@@ -64,9 +64,41 @@ namespace MyBlog.App.Controllers
             return Redirect(returnUrl ?? "/");
         }
 
+        [HttpGet]
         public IActionResult Register()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Register(RegisterViewModel viewModel)
+        {
+            if (viewModel.Password != viewModel.RetypePassword)
+            {
+                ModelState.AddModelError("", "Mật khẩu xác nhận không khớp.");
+                return View();
+            }
+
+            var user = new User
+            {
+                Email = viewModel.Email,
+                Password = viewModel.Password,
+                Username = viewModel.Username,
+                Role = "user"
+            };
+
+            try
+            {
+                _dbContext.Users.Add(user);
+                _dbContext.SaveChanges();
+            }
+            catch(Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                return View();
+            }
+
+            return RedirectToAction("Login", "Authen");
         }
     }
 }
