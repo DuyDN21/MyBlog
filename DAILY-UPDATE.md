@@ -1,6 +1,13 @@
 # Daily Update
 ✅🔄❌📌
 
+## 2025-10-13
+- Làm qua qua chút register, làm chút UI cho login với register, đã có thông báo lỗi, đơn giản là dùng asp validation
+- Tiếp theo sẽ thêm:
+    + login, register với google, github
+
+---
+
 ## 2025-10-12
 - Làm qua qua chút login, mới login cơ bản thôi, chưa có gì
 - Tiếp theo sẽ thêm:
