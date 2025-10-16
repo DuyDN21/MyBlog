@@ -2,6 +2,12 @@
 ✅🔄❌📌
 
 ## 2025-10-13
+- Mấy nay bận việc công ty quá chưa làm được
+- Tự hỏi không biết liệu mình có thể làm xong project này trong tháng 10 không?
+
+---
+
+## 2025-10-13
 - Làm qua qua chút register, làm chút UI cho login với register, đã có thông báo lỗi, đơn giản là dùng asp validation
 - Tiếp theo sẽ thêm:
     + login, register với google, github
